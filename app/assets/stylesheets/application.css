@@ -1,0 +1,92 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+nav{
+  float:right;
+}
+nav a{
+  display: inline-block;
+  padding: 10px;
+}
+#loading_weather{
+  display: none;
+  position: absolute;
+  top:20px;
+  left:20px;
+}
+#loading_weather span{
+  margin-left: -12px;
+}
+ .signal {
+     border:3px solid #666;
+     border-radius:30px;
+     height:30px;
+     left:50%;
+     margin:-15px 0 0 -15px;
+     opacity:0;
+     position:absolute;
+     top:50%;
+     width:30px;
+  
+     animation: pulsate 1s ease-out;
+     animation-iteration-count:infinite;
+ }
+
+ @keyframes pulsate {
+     0% {
+       transform:scale(.1);
+       opacity: 0.0;
+     }
+     50% {
+       opacity:1;
+     }
+     100% {
+       transform:scale(1.2);
+       opacity:0;
+     }
+ }
+
+ #current_weather{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+ }
+
+ #word_text{
+  font-size: 2em;
+  height:100px;
+  padding:10px;
+  width:97%;
+
+  -webkit-box-shadow: 3px 3px 3px 0px rgba(50, 50, 50, 0.62);
+  -moz-box-shadow:    3px 3px 3px 0px rgba(50, 50, 50, 0.62);
+  box-shadow:         3px 3px 3px 0px rgba(50, 50, 50, 0.62);
+ }
+
+ input{
+  background-color:#3D7CB8;
+  color:white;
+  font-size: 24px;
+  padding:10px 15px;
+ }
+
+ #others {
+  font-size: 32px;
+  line-height: 32px;
+  margin:80px auto;
+  padding:0px;
+  text-align: center;
+ }

@@ -1,0 +1,43 @@
+<%= javascript_include_tag controller.controller_name+'-'+controller.action_name %>
+
+<%= form_for(@word) do |f| %>
+  <% if @word.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@word.errors.count, "error") %> prohibited this word from being saved:</h2>
+
+      <ul>
+      <% @word.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <!-- <%= f.label :text %><br> -->
+    <%= f.text_area :text, placeholder: 'the weather feels...' %>
+  </div>
+
+  <%= f.hidden_field :temp %>
+  <%= f.hidden_field :desc %>
+  <%= f.hidden_field :humidity %>
+  <%= f.hidden_field :pressure %>
+  <%= f.hidden_field :wind %>
+  <%= f.hidden_field :clouds %>
+  <%= f.hidden_field :weather %>
+   
+  <div class="actions">
+    <%= f.submit 'Go' %>
+  </div>
+<% end %>
+
+<ul id="others" class="tlt"></ul>
+
+
+
+
+
+
+
+
+

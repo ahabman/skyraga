@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SkyRaga</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="<%= controller.controller_name %> <%= controller.action_name %>">
+
+  <div class="container">
+    
+    <nav>
+      <%= link_to 'home', root_path %>
+      <%= link_to 'index', words_path %>
+    </nav>
+
+    <div id="loading_weather">
+      <div class="signal"></div>
+    </div>
+
+    <div id="current_weather">
+      <span id="temp"></span>&deg; &mdash; <span id="desc"></span><br><br>
+      <span id="humidity"></span>% humidity<br>
+      <span id="clouds"></span>% cloudy <small>with</small> <span id="wind"></span> mph wind<br>
+      <br>
+      <span id="pressure"></span> <a href="http://en.wikipedia.org/wiki/Pascal_(unit)" target="_blank">hPa (pressure)</a><br>
+    </div>
+
+    <%= yield %>
+    
+  </div>
+
+</body>
+</html>

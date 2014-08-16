@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @word.text %>
+</p>
+
+<%= @word.temp %><br>
+<%= @word.desc %><br>
+<%= @word.humidity %><br>
+<%= @word.pressure %><br>
+<%= @word.wind %><br>
+<%= @word.clouds %><br>
+<br>
+
+<p>
+  <strong>Weather:</strong>
+  <%= @word.weather %>
+</p>
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>
