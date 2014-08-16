@@ -16,7 +16,7 @@
         clouds: clouds_range
         # humidity: humidity_range, 
         # pressure: pressure_range,
-      ).shuffle!
+      )
   end
 
   # GET /words
