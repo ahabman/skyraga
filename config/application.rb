@@ -8,6 +8,10 @@ Bundler.require(*Rails.groups)
 
 module Skyraga
   class Application < Rails::Application
+
+    # https://devcenter.heroku.com/articles/rails-4-asset-pipeline
+    config.serve_static_assets = true
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
