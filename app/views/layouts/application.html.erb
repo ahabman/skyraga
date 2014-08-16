@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans|Inconsolata' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -27,9 +28,9 @@
 
     <div id="current_weather">
       <span id="temp"></span>&deg; &mdash; <span id="desc"></span><br><br>
+      <span id="wind"></span> mph wind<br>
+      <span id="clouds"></span>% cloudy<br>
       <span id="humidity"></span>% humidity<br>
-      <span id="clouds"></span>% cloudy <small>with</small> <span id="wind"></span> mph wind<br>
-      <br>
       <span id="pressure"></span> <a href="http://en.wikipedia.org/wiki/Pascal_(unit)" target="_blank">hPa (pressure)</a><br>
     </div>
 

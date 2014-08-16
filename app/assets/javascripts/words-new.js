@@ -75,7 +75,7 @@ ready = function() {
     })
 
     //rotateInDownLeft
-    $('.tlt').textillate({ in:{effect:'bounceInUp'}, out: {effect: 'hinge', shuffle: true},initialDelay: 700 });
+    $('.tlt').textillate({ initialDelay: 700, loop: true, minDisplayTime: 1700, in:{effect:'bounceInUp'}, out: {effect: 'hinge', shuffle: true} });
 
   }
   function populate_weather(structured_data){
@@ -96,7 +96,9 @@ ready = function() {
     $('#word_weather').val( JSON.stringify(structured_data.data) );
   }
 
-  
+  colors = ['#3D7CB8', '#457326', '#EB6841', '#1B676B', '#59A80F'];
+  color = colors[ Math.floor(Math.random()*colors.length) ];
+  $('form#new_word input').css('background-color', color);
 
 
 };
