@@ -10,13 +10,16 @@
     wind_range =      params[:wind].to_i-1..params[:wind].to_i+1
     clouds_range =    params[:clouds]
 
-    render json: Word.where.any_of(
+    # render json: Word.where.any_of(
+    #     temp: temp_range,
+    #     wind: wind_range,
+    #     clouds: clouds_range
+    #     # humidity: humidity_range, 
+    #     # pressure: pressure_range,
+    # )
+    render json: Word.where(
         temp: temp_range,
-        wind: wind_range,
-        clouds: clouds_range
-        # humidity: humidity_range, 
-        # pressure: pressure_range,
-      )
+    )
   end
 
   # GET /words
