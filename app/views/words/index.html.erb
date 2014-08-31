@@ -4,9 +4,9 @@
   <thead>
     <tr>
       <th>Text</th>
+      <th>Temp</th>
       <th>Clouds</th>
       <th>Pressure</th>
-      <th>Temp</th>
       <th>Wind</th>
       <th>Created</th>
       <th colspan="2"></th>
@@ -17,9 +17,9 @@
     <% @words.each do |word| %>
       <tr>
         <td><%= word.text %></td>
+        <td><%= word.temp %></td>
         <td><%= word.clouds %></td>
         <td><%= word.pressure %></td>
-        <td><%= word.temp %></td>
         <td><%= word.wind %></td>
         <td><%= word.created_at %>&nbsp;</td>
         <td><%= link_to 'Edit', edit_word_path(word) %>&nbsp;</td>
