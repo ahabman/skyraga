@@ -10,16 +10,31 @@
     wind_range =      params[:wind].to_i-1..params[:wind].to_i+1
     clouds_range =    params[:clouds]
 
-    # render json: Word.where.any_of(
-    #     temp: temp_range,
-    #     wind: wind_range,
-    #     clouds: clouds_range
-    #     # humidity: humidity_range, 
-    #     # pressure: pressure_range,
-    # )
-    render json: Word.where(
-        temp: temp_range,
-    )
+    exact_matches = Word.where(
+       temp: params[:temp],
+       humidity: params[:humidity],
+       pressure: params[:pressure],
+       wind: params[:wind],
+       clouds: params[:clouds]
+     )
+
+    range_matches = Word.where(
+       temp: temp_range,
+       humidity: humidity_range,
+       pressure: pressure_range,
+       wind: wind_range,
+       clouds: clouds_range
+     )
+    
+    temp_clouds_range = Word.where(temp: params[:temp], clouds: clouds_range)
+    temp_humidity_range = Word.where(temp: params[:temp], humidity: humidity_range)
+    temp_pressure_range = Word.where(temp: params[:temp], pressure: pressure_range)
+    temp_wind_range = Word.where(temp: params[:temp], wind: wind_range)
+
+    @words = [exact_matches, range_matches, temp_clouds_range, temp_humidity_range, temp_pressure_range, temp_wind_range].flatten.uniq
+
+    render json: @words
+
   end
 
   # GET /words
