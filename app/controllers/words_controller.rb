@@ -40,7 +40,7 @@
   # GET /words
   # GET /words.json
   def index
-    @words = Word.order(temp: :desc).all
+    @words = Word.order(temp: :desc, text: :asc).all
   end
 
   # GET /words/1
