@@ -7,8 +7,8 @@
     temp_range =      params[:temp].to_i-1..params[:temp].to_i+1
     humidity_range =  params[:humidity].to_i-1..params[:humidity].to_i+1
     pressure_range =  params[:pressure].to_i-1..params[:pressure].to_i+1
-    wind_range =      params[:wind].to_i-1..params[:wind].to_i+1
-    clouds_range =    params[:clouds]
+    wind_range =      params[:wind].to_i-6..params[:wind].to_i+6
+    clouds_range =    params[:clouds].to_i-40..params[:clouds].to_i+40
 
     exact_matches = Word.where(
        temp: params[:temp],
