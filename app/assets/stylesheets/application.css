@@ -74,12 +74,12 @@ nav a{
   padding:10px 20px;
   width:100%;
 
-  -webkit-box-shadow: 3px 3px 3px 0px rgba(50, 50, 50, 0.62);
-  -moz-box-shadow:    3px 3px 3px 0px rgba(50, 50, 50, 0.62);
-  box-shadow:         3px 3px 3px 0px rgba(50, 50, 50, 0.62);
+  -webkit-box-shadow: 3px 3px 3px 0px rgba(190, 190, 190, 0.62);
+  -moz-box-shadow:    3px 3px 3px 0px rgba(190, 190, 190, 0.62);
+  box-shadow:         3px 3px 3px 0px rgba(190, 190, 190, 0.62);
  }
 
- input{
+ .actions input{
   border: none;
   color:white;
   font-size: 24px;
@@ -88,7 +88,8 @@ nav a{
  }
 
  #word_text,
- input{
+ input,
+ #controls button{
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -101,3 +102,35 @@ nav a{
   padding:0px;
   text-align: center;
  }
+
+#controls{
+  margin-bottom:20px;
+}
+
+#controls button,
+#controls input{
+  padding:10px 20px;
+  border:solid 1px #777;
+  margin-bottom: 20px;
+}
+
+#controls input{
+  font-size: 24px;
+  width:100%;
+}
+
+#controls button{
+  background-color: #FFF;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+th{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+th, td{
+  padding-right: 20px;
+}
+
+

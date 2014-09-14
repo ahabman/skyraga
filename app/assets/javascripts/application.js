@@ -15,3 +15,5 @@
 //= require turbolinks
 //= require jquery.lettering.js
 //= require jquery.textillate.js
+//= require list.min.js
+//= require words.js
